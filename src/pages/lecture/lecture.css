@@ -94,17 +94,16 @@
   margin: 3px auto;
   text-align: center;
   color: white;
+
+  
 }
-
-
 .a-btn {
   text-decoration: none;
   background-color: white;
   padding: 5px 10px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 50px;
 }
-
 /* Base Button Styles */
 .aa-btn {
   background-color: #f44336; /* Button background color */
