@@ -1,33 +1,88 @@
 .home {
-  background-color: #e0d1a0;
-  padding: 100px 0;
+  background: linear-gradient(135deg, #e0d1a0, #f9f9f9);
+  padding: 100px 20px; /* Adjusted padding for smaller screens */
   text-align: center;
+  position: relative;
+  overflow: hidden; /* Prevents overflow for animations */
+}
 
-  .home-content {
-    max-width: 800px;
-    margin: 0 auto;
+.home-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in; /* Fade-in animation for content */
+}
 
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333; /* Darker color for better readability */
+  animation: slideIn 0.8s ease-out; /* Slide-in animation */
+}
 
-      @media (max-width: 768px) {
-        font-size: 28px;
-      }
-    }
+p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  font-family: 'Courier New', monospace;
+  animation: fadeIn 1.2s ease-in; /* Fade-in animation for paragraph */
+}
 
-    p {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 40px;
-      font-family: 'Courier New', monospace;
-      @media (max-width: 768px) {
-        font-size: 16px;
-      }
-    }
+button {
+  padding: 12px 24px;
+  background-color: #8a4baf; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
 
-    button {
-      padding: 12px 24px;
-    }
+button:hover {
+  background-color: #7a3b9c; /* Darker shade on hover */
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 478px) {
+  h1 {
+    font-size: 24px; /* Further reduced font size for small screens */
+  }
+
+  p {
+    font-size: 14px; /* Further reduced font size for small screens */
+  }
+
+  button {
+    padding: 10px 20px; /* Adjust button size for smaller screens */
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
