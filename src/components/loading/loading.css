@@ -3,17 +3,22 @@
   align-items: center;
   justify-content: center;
   height: 80vh;
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  position: relative;
 }
 
+/* Loader Styles */
 .loader {
-  border: 5px solid #f3f3f3;
-  border-top: 5px solid #8a4baf;
+  border: 8px solid transparent; /* Transparent border for a cleaner look */
+  border-top: 8px solid #8a4baf; /* Main color for the top */
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
+  width: 80px; /* Increased size for better visibility */
+  height: 80px; /* Increased size for better visibility */
+  animation: spin 1.2s linear infinite, pulse 1.5s ease-in-out infinite; /* Added pulse animation */
+  box-shadow: 0 0 15px rgba(138, 75, 191, 0.5); /* Soft shadow for depth */
 }
 
+/* Keyframes for spinning animation */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -21,4 +26,23 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+/* Keyframes for pulsating effect */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Optional Text Below Loader */
+.loading-text {
+  margin-top: 20px; /* Space between loader and text */
+  font-size: 20px; /* Size of the loading text */
+  color: #333; /* Darker text for contrast */
+  font-weight: 600; /* Slightly bolder text */
+  text-align: center; /* Center align the text */
 }
