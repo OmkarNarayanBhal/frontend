@@ -16,3 +16,80 @@
     gap: 30px;
   }
 }
+
+/* Search Bar Styles */
+.search-bar {
+  width: 100%;
+  max-width: 600px; /* Maximum width */
+  padding: 12px 20px; /* Padding for top/bottom and left/right */
+  margin-bottom: 20px; /* Space below the search bar */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Focus State */
+.search-bar:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Highlight effect */
+}
+
+/* Placeholder Text Style */
+.search-bar::placeholder {
+  color: #aaa; /* Light gray color for placeholder */
+  font-style: italic; /* Italic style for placeholder */
+}
+
+/* Responsive Styles */
+@media (max-width: 478px) {
+  /* Styles for screens smaller than or equal to 478px */
+  .search-bar {
+    font-size: 14px; /* Smaller font size */
+    padding: 10px 16px; /* Adjusted padding */
+    max-width: 100%; /* Full width on small screens */
+  }
+}
+
+@media (min-width: 479px) and (max-width: 578px) {
+  /* Styles for screens between 479px and 578px */
+  .search-bar {
+    font-size: 14px; /* Smaller font size */
+    padding: 10px 16px; /* Adjusted padding */
+    max-width: 100%; /* Full width on small screens */
+  }
+}
+
+@media (min-width: 579px) and (max-width: 600px) {
+  /* Styles for screens between 579px and 600px */
+  .search-bar {
+    font-size: 15px; /* Slightly larger font size */
+    padding: 11px 18px; /* Adjusted padding */
+    max-width: 100%; /* Full width */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+  /* Styles for screens between 601px and 767px (e.g., small tablets) */
+  .search-bar {
+    font-size: 15px; /* Slightly larger font size */
+    padding: 11px 18px; /* Adjusted padding */
+    max-width: 100%; /* Full width */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for screens between 768px and 992px (e.g., tablets) */
+  .search-bar {
+    max-width: 500px; /* Maximum width for tablets */
+  }
+}
+
+@media (min-width: 992px) {
+  /* Styles for screens larger than 992px (e.g., desktops) */
+  .search-bar {
+    max-width: 600px; /* Maximum width for desktops */
+  }
+}
