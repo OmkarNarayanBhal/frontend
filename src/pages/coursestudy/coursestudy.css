@@ -1,38 +1,75 @@
 .course-study-page {
-  padding: 50px 0;
-  background-color: #b1a372;
+  padding: 5em 0;  /* Adjusted for better responsiveness */
+  background: linear-gradient(135deg, #d4af7f, #b1a372, #8a4baf);
+  background-size: 300% 300%;  /* Allows for animation effect */
+  animation: gradientAnimation 15s ease infinite;  /* Animation for background */
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 80vh;
+  color: white;  /* Changed text color for better contrast */
 
   h2 {
-    font-size: 24px;
-    color: #8a4baf;
+    font-size: 2em;  /* Responsive font size */
+    color: #000000;  /* White color for better visibility */
     text-align: center;
+    margin: 0.5em 0;  /* Added margin for spacing */
   }
 
-  h4 {
-    font-size: 21px;
-    color: #8a4baf;
+  p {
+    font-size: 1.75em;  /* Default font size for p tags (previously h4) */
+    color: #fff;  /* White color for better visibility */
     text-align: center;
-  }
-
-  h5 {
-    font-size: 20px;
-    color: #8a4baf;
-    text-align: center;
+    margin: 0.5em 0;  /* Added margin for spacing */
+    
+    &.subheading {
+      font-size: 1.5em;  /* Font size for the second p tag (previously h5) */
+    }
   }
 
   a {
     text-decoration: none;
-    background-color: white;
-    padding: 5px 10px;
+    background-color: rgba(215, 136, 242, 0.8);  /* Semi-transparent white */
+    padding: 0.5em 1.5em;  /* Responsive padding */
     border: 1px solid black;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth transition */
+    
+    &:hover {
+      background-color: rgb(231, 113, 113);  /* Fully opaque on hover */
+      transform: scale(1.05);  /* Slightly enlarge on hover */
+    }
+  }
+
+  @media (max-width: 478px) {
+    h2 {
+      font-size: 1.5em;  /* Adjusted for smaller screens */
+    }
+    
+    p {
+      font-size: 1.25em;  /* Adjusted font size for smaller screens */
+      
+      &.subheading {
+        font-size: 1em;  /* Adjusted font size for the second p tag */
+      }
+    }
+    
+    padding: 2em 0;  /* Adjusted padding for smaller screens */
   }
 }
 
+/* Keyframes for background animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /* Base Button Styles */
 .aa-btn {
   background-color: #f44336; /* Button background color */
