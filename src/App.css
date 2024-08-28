@@ -2,8 +2,30 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #b1a372;
-  font-family: Arial, sans-serif;
+  background-color: #f2e0e0; /* Lighter background for contrast */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font stack */
+  color: #333; /* Darker text color for better readability */
+  line-height: 1.6; /* Improved line height for better readability */
+}
+
+/* Optional: Add a subtle texture or pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('./download.png') repeat; /* Add a texture image */
+  opacity: 0.05; /* Subtle overlay effect */
+  pointer-events: none; /* Allow interaction with underlying elements */
+}
+
+/* Optional: Add a responsive design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Slightly smaller font size for mobile */
+  }
 }
 
 .common-btn {
