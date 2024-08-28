@@ -30,6 +30,11 @@ const CourseStudy = ({ user }) => {
           </Link>
         </div>
       )}
+         <div className="aaa-btn">
+    <a className="aa-btn" href="https://omieai.netlify.app/">
+          Ask🤔!
+        </a>
+    </div>
     </>
   );
 };
