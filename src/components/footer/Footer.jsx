@@ -12,16 +12,16 @@ const Footer = () => {
       <div className="footer-content">
         <p>
           &copy; 2024 Your E-Learning Platform. All rights reserved. <br /> Made
-          with ❤️‍🩹 <a href="">Omkar bhal</a>
+          with ❤️‍🩹 <a href="https://omkar-portfolio-1.onrender.com">Omkar bhal</a>
         </p>
         <div className="social-links">
-          <a href="">
+          <a href="https://omkar-portfolio-1.onrender.com">
             <AiFillFacebook />
           </a>
-          <a href="">
+          <a href="https://omkar-portfolio-1.onrender.com">
             <AiFillTwitterSquare />
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/_14omkar/">
             <AiFillInstagram />
           </a>
         </div>
