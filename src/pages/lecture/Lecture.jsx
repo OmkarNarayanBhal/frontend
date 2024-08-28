@@ -8,6 +8,19 @@ import toast from "react-hot-toast";
 import { TiTick } from "react-icons/ti";
 
 const Lecture = ({ user }) => {
+  const isValidURL = (str) => {
+    const pattern = new RegExp(
+      "^(https?:\\/\\/)?" + // protocol
+        "((([a-zA-Z0-9$_.+!*'(),;?&=-]|%[0-9a-fA-F]{2})+:)*([a-zA-Z0-9$_.+!*'(),;?&=-]|%[0-9a-fA-F]{2})+@)?" + // username:password@
+        "(((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|" + // IPv4
+        "(([a-zA-Z0-9$_.+!*'(),;?&=-]|%[0-9a-fA-F]{2})+\\.)+[a-zA-Z]{2,})" + // domain name
+        "(\\:[0-9]{1,5})?" + // port number
+        "(\\/[-a-zA-Z0-9$_.+!*'(),;?&=-]+)*" + // path
+        "(\\?[-a-zA-Z0-9$_.+!*'(),;?&=-]+(=[-a-zA-Z0-9$_.+!*'(),;?&=-]*)?)*" + // query parameters
+        "(\\#[-a-zA-Z0-9$_.+!*'(),;?&=-]*)?$" // fragment locator
+    );
+    return pattern.test(str);
+  };
   const [lectures, setLectures] = useState([]);
   const [lecture, setLecture] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -196,7 +209,14 @@ const Lecture = ({ user }) => {
                         onEnded={() => addProgress(lecture._id)}
                       ></video>
                       <h1>{lecture.title}</h1>
-                      <h3>{lecture.description}</h3>
+                                        {/* Description as clickable link if valid URL */}
+      {isValidURL(lecture.description) ? (
+        <a className="a-btn" href={lecture.description} target="_blank" rel="noopener noreferrer">
+          Assigenment and Quiz's
+        </a>
+      ) : (
+        <p>{lecture.description}</p>
+      )}
                     </>
                   ) : (
                     <h1>Please Select a Lecture</h1>
