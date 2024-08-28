@@ -104,3 +104,41 @@
   border: 1px solid black;
   border-radius: 5px;
 }
+
+/* Base Button Styles */
+.aa-btn {
+  background-color: #f44336; /* Button background color */
+  color: white; /* Text color */
+  padding: 14px 25px; /* Padding for top/bottom and left/right */
+  text-align: center; /* Center text alignment */
+  text-decoration: none; /* Remove underline from text */
+  display: inline-block; /* Inline-block for button layout */
+  border-radius: 100px; /* Fully rounded corners */
+  margin: 3px auto; /* Margin for spacing */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect */
+.aa-btn:hover {
+  background-color: #d32f2f; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Additional Button Styles */
+.aaa-btn {
+  display: flex; /* Flexbox for alignment */
+  justify-content: end; /* Align to the end */
+  text-align: end; /* Text alignment */
+  margin-left: 90%; /* Margin for positioning */
+  border-radius: 100px; /* Fully rounded corners */
+}
+
+/* Optional: Add focus styles for accessibility */
+.aa-btn:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.5); /* Outline shadow for focus */
+}
