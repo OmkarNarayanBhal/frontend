@@ -26,15 +26,17 @@ const CourseStudy = ({ user }) => {
           <h5>by - {course.createdBy}</h5>
           <h5>Duration - {course.duration} weeks</h5>
           <Link to={`/lectures/${course._id}`}>
-            <h2>Lectures</h2>
+            Lectures
           </Link>
-        </div>
-      )}
-         <div className="aaa-btn">
+          <div className="aaa-btn">
     <a className="aa-btn" href="https://omieai.netlify.app/">
           Ask🤔!
         </a>
     </div>
+        </div>
+        
+      )}
+     
     </>
   );
 };
