@@ -2,7 +2,8 @@
   padding: 80px 0;
   text-align: center;
   min-height: 55vh;
-
+ background: linear-gradient(135deg, #d4af7f, #b1a372, #8a4baf);
+  animation: gradientAnimation 15s ease infinite;  /* Animation for background */
   .about-content {
     max-width: 800px;
     margin: 0 auto;
