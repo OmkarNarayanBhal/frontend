@@ -1,5 +1,4 @@
- 
-📚 Online Learning Platform with AI Chatbot 🤖
+ 📚 Online Learning Platform with AI Chatbot 🤖
 
 Welcome to my Online Learning Platform! This project is a full-featured learning management system (LMS) built using the MERN stack. Users can register, purchase courses, track their progress, and access course materials. Oh, and we’ve added a little extra magic—an AI-powered chatbot, OmieAi, to help you out with any doubts!
 
